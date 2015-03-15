@@ -21,8 +21,8 @@
     }
     // AMD module is defined
     else if (typeof define === "function" && define.amd) {
-        define("bootstrap-dialog", ["jquery"], function($) {
-            return factory($);
+        define("bootstrap-dialog", function($) {
+            return factory(root.jQuery);
         });
     } else {
         // planted over the root!
